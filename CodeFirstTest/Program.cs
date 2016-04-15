@@ -10,6 +10,16 @@ namespace CodeFirstTest
     {
         static void Main(string[] args)
         {
+            using (var ctx = new SchoolContext())
+            {
+                ctx.Database.Initialize(true);
+
+                //Student stud = new Student() { StudentName = "New Student" };
+                //ctx.Students.Add(stud);
+                //ctx.SaveChanges();
+            }
+            Console.WriteLine("hello Tom!");
+            Console.ReadLine();
         }
     }
 }
